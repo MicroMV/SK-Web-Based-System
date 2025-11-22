@@ -1,0 +1,322 @@
+ .modal {
+     display: none;
+     position: fixed;
+     z-index: 9999;
+     left: 0;
+     top: 0;
+     width: 100%;
+     height: 100%;
+     overflow: auto;
+     background-color: rgba(0, 0, 0, 0.6);
+     animation: fadeIn 0.3s;
+ }
+
+ @keyframes fadeIn {
+     from {
+         opacity: 0;
+     }
+
+     to {
+         opacity: 1;
+     }
+ }
+
+ .modal-content {
+     background-color: white;
+     margin: 5% auto;
+     padding: 2rem;
+     border-radius: 12px;
+     width: 90%;
+     max-width: 600px;
+     box-shadow: 0 5px 25px rgba(0, 0, 0, 0.3);
+     animation: slideDown 0.3s;
+ }
+
+ @keyframes slideDown {
+     from {
+         transform: translateY(-50px);
+         opacity: 0;
+     }
+
+     to {
+         transform: translateY(0);
+         opacity: 1;
+     }
+ }
+
+ .modal-header {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     margin-bottom: 1.5rem;
+     padding-bottom: 1rem;
+     border-bottom: 2px solid #f0f0f0;
+ }
+
+ .modal-header h3 {
+     color: #007b83;
+     margin: 0;
+     font-size: 1.5rem;
+ }
+
+ .close-btn {
+     color: #666;
+     font-size: 1.8rem;
+     cursor: pointer;
+     transition: color 0.3s;
+     background: none;
+     border: none;
+     padding: 0;
+     line-height: 1;
+ }
+
+ .close-btn:hover {
+     color: #dc3545;
+ }
+
+ .form-group {
+     margin-bottom: 1.2rem;
+ }
+
+ .form-group label {
+     display: block;
+     margin-bottom: 0.5rem;
+     color: #333;
+     font-weight: 600;
+     font-size: 0.95rem;
+ }
+
+ .form-input,
+ textarea,
+ select,
+ input[type="file"] {
+     width: 100%;
+     padding: 0.8rem;
+     border: 1px solid #ddd;
+     border-radius: 8px;
+     font-size: 1rem;
+     font-family: 'Inter', sans-serif;
+     transition: border-color 0.3s;
+ }
+
+ .form-input:focus,
+ textarea:focus,
+ select:focus {
+     outline: none;
+     border-color: #007b83;
+     box-shadow: 0 0 0 3px rgba(0, 123, 131, 0.1);
+ }
+
+ textarea {
+     resize: vertical;
+     min-height: 80px;
+ }
+
+ .btn-primary {
+     background: linear-gradient(135deg, #007b83 0%, #005a61 100%);
+     color: white;
+     border: none;
+     padding: 0.9rem 1.5rem;
+     border-radius: 8px;
+     cursor: pointer;
+     font-size: 1rem;
+     font-weight: 600;
+     width: 100%;
+     transition: transform 0.2s, box-shadow 0.2s;
+ }
+
+ .btn-primary:hover {
+     transform: translateY(-2px);
+     box-shadow: 0 4px 12px rgba(0, 123, 131, 0.3);
+ }
+
+ .page-header {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     margin-bottom: 2rem;
+     background: white;
+     padding: 1.5rem;
+     border-radius: 12px;
+     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+ }
+
+ .page-header h2 {
+     color: #007b83;
+     font-size: 1.8rem;
+     margin: 0;
+     display: flex;
+     align-items: center;
+     gap: 0.8rem;
+ }
+
+ .add-btn {
+     background: #007b83;
+     color: white;
+     border: none;
+     padding: 0.8rem 1.5rem;
+     border-radius: 8px;
+     cursor: pointer;
+     font-size: 1rem;
+     font-weight: 600;
+     display: inline-flex;
+     align-items: center;
+     gap: 0.5rem;
+     transition: all 0.3s ease;
+     box-shadow: 0 2px 8px rgba(0, 123, 131, 0.3);
+ }
+
+ .add-btn:hover {
+     background: #005a61;
+     transform: translateY(-2px);
+     box-shadow: 0 4px 12px rgba(0, 123, 131, 0.4);
+ }
+
+ .category-section {
+     background: white;
+     border-radius: 12px;
+     padding: 1.5rem;
+     margin-bottom: 2rem;
+     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+ }
+
+ .category-header {
+     display: flex;
+     align-items: center;
+     gap: 0.8rem;
+     margin-bottom: 1.5rem;
+     padding-bottom: 1rem;
+     border-bottom: 3px solid #007b83;
+ }
+
+ .category-header h3 {
+     color: #007b83;
+     margin: 0;
+     font-size: 1.4rem;
+ }
+
+ .category-badge {
+     background: #007b83;
+     color: white;
+     padding: 0.3rem 0.8rem;
+     border-radius: 20px;
+     font-size: 0.85rem;
+     font-weight: 600;
+ }
+
+ .file-grid {
+     display: grid;
+     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+     gap: 1.5rem;
+ }
+
+ .file-card {
+     background: #f9f9f9;
+     border: 1px solid #e0e0e0;
+     border-radius: 8px;
+     padding: 1.2rem;
+     transition: all 0.3s;
+ }
+
+ .file-card:hover {
+     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+     transform: translateY(-3px);
+ }
+
+ .file-icon {
+     font-size: 3rem;
+     color: #007b83;
+     margin-bottom: 0.8rem;
+ }
+
+ .file-name {
+     font-weight: 600;
+     color: #333;
+     margin-bottom: 0.5rem;
+     word-wrap: break-word;
+ }
+
+ .file-meta {
+     font-size: 0.85rem;
+     color: #666;
+     margin-bottom: 0.3rem;
+ }
+
+ .file-actions {
+     display: flex;
+     gap: 0.5rem;
+     margin-top: 1rem;
+ }
+
+ .file-btn {
+     padding: 0.5rem 1rem;
+     border-radius: 6px;
+     border: none;
+     cursor: pointer;
+     font-size: 0.9rem;
+     transition: all 0.3s;
+     text-decoration: none;
+     display: inline-flex;
+     align-items: center;
+     gap: 0.3rem;
+ }
+
+ .file-btn.download {
+     background: #007b83;
+     color: white;
+ }
+
+ .file-btn.download:hover {
+     background: #005a61;
+ }
+
+ .file-btn.delete {
+     background: #dc3545;
+     color: white;
+ }
+
+ .file-btn.delete:hover {
+     background: #bd2130;
+ }
+
+ .no-files {
+     text-align: center;
+     padding: 2rem;
+     color: #999;
+     font-style: italic;
+ }
+
+ .success-message {
+     background: #d4edda;
+     color: #155724;
+     padding: 1rem;
+     border-radius: 8px;
+     margin-bottom: 1.5rem;
+     border-left: 4px solid #28a745;
+ }
+
+ .error-message {
+     background: #f8d7da;
+     color: #721c24;
+     padding: 1rem;
+     border-radius: 8px;
+     margin-bottom: 1.5rem;
+     border-left: 4px solid #dc3545;
+ }
+
+ @media (max-width: 768px) {
+     .file-grid {
+         grid-template-columns: 1fr;
+     }
+
+     .page-header {
+         flex-direction: column;
+         align-items: flex-start;
+         gap: 1rem;
+     }
+
+     .add-btn {
+         width: 100%;
+         justify-content: center;
+     }
+ }
