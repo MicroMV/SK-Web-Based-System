@@ -27,7 +27,7 @@
 .icon-circle {
     width: 80px;
     height: 80px;
-    background: linear-gradient(135deg, #007b83 0%, #006670 100%);
+    background: #213555;
     border-radius: 50%;
     display: inline-flex;
     align-items: center;
@@ -37,7 +37,7 @@
 }
 
 .signin-header h2 {
-    color: #007b83;
+    color: #213555;
     margin: 0 0 0.5rem 0;
     font-size: 1.8rem;
 }
@@ -82,7 +82,7 @@
 }
 
 .form-group label svg {
-    color: #007b83;
+    color: #213555;
 }
 
 .form-group input[type="text"],
@@ -99,7 +99,7 @@
 
 .form-group input:focus {
     outline: none;
-    border-color: #007b83;
+    border-color: #213555;
     box-shadow: 0 0 0 3px rgba(0, 123, 131, 0.1);
 }
 
@@ -126,11 +126,11 @@
 }
 
 .toggle-password:hover {
-    color: #007b83;
+    color: #213555;
 }
 
 .toggle-password.active {
-    color: #007b83;
+    color: #213555;
 }
 
 /* Hide browser's default password reveal button */
@@ -160,7 +160,7 @@
 .signin-btn {
     width: 100%;
     padding: 1rem;
-    background: linear-gradient(135deg, #007b83 0%, #006670 100%);
+    background: #213555;
     color: white;
     border: none;
     border-radius: 8px;
@@ -202,7 +202,7 @@
 }
 
 .info-text svg {
-    color: #007b83;
+    color: #213555;
     flex-shrink: 0;
 }
 footer {

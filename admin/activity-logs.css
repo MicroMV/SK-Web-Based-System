@@ -12,7 +12,7 @@
  }
 
  .page-header h2 {
-     color: #007b83;
+     color: #213555;
      font-size: 1.8rem;
      margin: 0;
      display: flex;
@@ -32,7 +32,7 @@
      padding: 1.5rem;
      border-radius: 12px;
      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-     border-left: 4px solid #007b83;
+     border-left: 4px solid #213555;
  }
 
  .stat-card h4 {
@@ -44,7 +44,7 @@
  .stat-card .number {
      font-size: 2rem;
      font-weight: bold;
-     color: #007b83;
+     color: #213555;
  }
 
  .filter-section {
@@ -80,7 +80,7 @@
  }
 
  .btn-primary {
-     background: linear-gradient(135deg, #007b83 0%, #005a61 100%);
+     background: #213555;
      color: white;
      border: none;
      padding: 0.7rem 1.5rem;
@@ -127,7 +127,7 @@
  }
 
  .admin-table thead {
-     background: linear-gradient(135deg, #007b83 0%, #005a61 100%);
+     background: #213555;
  }
 
  .admin-table th {

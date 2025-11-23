@@ -56,7 +56,7 @@
  }
 
  .modal-header h3 {
-     color: #007b83;
+     color: #213555;
      margin: 0;
      font-size: 1.5rem;
  }
@@ -115,12 +115,12 @@
  input[type="date"]:focus,
  input[type="number"]:focus {
      outline: none;
-     border-color: #007b83;
+     border-color: #213555;
      box-shadow: 0 0 0 3px rgba(0, 123, 131, 0.1);
  }
 
  .btn-primary {
-     background: linear-gradient(135deg, #007b83 0%, #005a61 100%);
+     background: #213555;
      color: white;
      border: none;
      padding: 0.9rem 1.5rem;
@@ -151,7 +151,7 @@
  }
 
  .page-header h2 {
-     color: #007b83;
+     color: #213555;
      font-size: 1.8rem;
      margin: 0;
      display: flex;
@@ -167,7 +167,7 @@
 
  .add-btn,
  .export-btn {
-     background: #007b83;
+     background: #213555;
      color: white;
      border: none;
      padding: 0.8rem 1.5rem;
@@ -185,7 +185,7 @@
 
  .add-btn:hover,
  .export-btn:hover {
-     background: #005a61;
+     background: #30476c;
      transform: translateY(-2px);
      box-shadow: 0 4px 12px rgba(0, 123, 131, 0.4);
  }
@@ -237,7 +237,7 @@
      padding: 1.5rem;
      border-radius: 12px;
      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-     border-left: 4px solid #007b83;
+     border-left: 4px solid #213555;
  }
 
  .stat-card h4 {
@@ -249,7 +249,7 @@
  .stat-card .number {
      font-size: 2rem;
      font-weight: bold;
-     color: #007b83;
+     color: #213555;
  }
 
  .table-container {
@@ -265,7 +265,7 @@
  }
 
  .admin-table thead {
-     background: linear-gradient(135deg, #007b83 0%, #005a61 100%);
+     background: #213555;
  }
 
  .admin-table th {
@@ -303,12 +303,12 @@
  }
 
  .table-btn.edit {
-     background: #007b83;
+     background: #213555;
      color: white;
  }
 
  .table-btn.edit:hover {
-     background: #005a61;
+     background: #30476c;
      transform: translateY(-2px);
  }
 
@@ -323,7 +323,7 @@
  }
 
  .purok-badge {
-     background: #007b83;
+     background: #213555;
      color: white;
      padding: 0.3rem 0.8rem;
      border-radius: 20px;

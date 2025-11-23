@@ -49,12 +49,12 @@
 }
 
 .btn-primary {
-    background: #007b83;
+    background: #213555;
     color: white;
 }
 
 .btn-primary:hover {
-    background: #005a61;
+    background: #30476c;
 }
 
 .btn-secondary {
@@ -115,7 +115,7 @@
 }
 
 .badge-reviewed {
-    background: #17a2b8;
+    background: #213555;
     color: white;
 }
 
@@ -149,7 +149,7 @@
     padding: 1rem;
     border-radius: 8px;
     margin-bottom: 1rem;
-    border-left: 4px solid #007b83;
+    border-left: 4px solid #213555;
 }
 
 .feedback-response {

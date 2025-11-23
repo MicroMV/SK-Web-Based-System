@@ -121,7 +121,7 @@ $stats = $stats_stmt->fetch(PDO::FETCH_ASSOC);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registration Codes | Admin</title>
+    <title>Registration Codes</title>
     <link rel="stylesheet" href="admin-style.css">
     <link rel="stylesheet" href="generate-codes.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
@@ -398,7 +398,7 @@ $stats = $stats_stmt->fetch(PDO::FETCH_ASSOC);
                         .print-header {
                             text-align: center;
                             margin-bottom: 2rem;
-                            border-bottom: 3px solid #007b83;
+                            border-bottom: 3px solid #213555;
                             padding-bottom: 1.5rem;
                         }
                         
@@ -422,7 +422,7 @@ $stats = $stats_stmt->fetch(PDO::FETCH_ASSOC);
                         }
                         
                         .print-header h1 {
-                            color: #007b83;
+                            color: #213555;
                             margin: 0.5rem 0;
                             font-size: 1.8rem;
                         }
@@ -462,7 +462,7 @@ $stats = $stats_stmt->fetch(PDO::FETCH_ASSOC);
                         }
                         
                         .code-card {
-                            border: 2px dashed #007b83;
+                            border: 2px dashed #213555;
                             padding: 1.5rem;
                             text-align: center;
                             border-radius: 8px;
@@ -481,13 +481,13 @@ $stats = $stats_stmt->fetch(PDO::FETCH_ASSOC);
                             font-family: 'Courier New', monospace;
                             font-size: 1.8rem;
                             font-weight: bold;
-                            color: #007b83;
+                            color: #213555;
                             letter-spacing: 3px;
                             margin: 1rem 0;
                             padding: 1rem;
                             background: white;
                             border-radius: 6px;
-                            border: 1px solid #007b83;
+                            border: 1px solid #213555;
                         }
                         
                         .code-instructions {
@@ -504,7 +504,7 @@ $stats = $stats_stmt->fetch(PDO::FETCH_ASSOC);
                             text-align: center;
                             margin-top: 3rem;
                             padding-top: 1rem;
-                            border-top: 2px solid #007b83;
+                            border-top: 2px solid #213555;
                             font-size: 0.85rem;
                             color: #666;
                         }

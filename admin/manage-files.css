@@ -54,7 +54,7 @@
  }
 
  .modal-header h3 {
-     color: #007b83;
+     color: #213555;
      margin: 0;
      font-size: 1.5rem;
  }
@@ -103,7 +103,7 @@
  textarea:focus,
  select:focus {
      outline: none;
-     border-color: #007b83;
+     border-color: #213555;
      box-shadow: 0 0 0 3px rgba(0, 123, 131, 0.1);
  }
 
@@ -113,7 +113,7 @@
  }
 
  .btn-primary {
-     background: linear-gradient(135deg, #007b83 0%, #005a61 100%);
+     background: #213555;
      color: white;
      border: none;
      padding: 0.9rem 1.5rem;
@@ -142,7 +142,7 @@
  }
 
  .page-header h2 {
-     color: #007b83;
+     color: #213555;
      font-size: 1.8rem;
      margin: 0;
      display: flex;
@@ -151,7 +151,7 @@
  }
 
  .add-btn {
-     background: #007b83;
+     background: #213555;
      color: white;
      border: none;
      padding: 0.8rem 1.5rem;
@@ -167,7 +167,7 @@
  }
 
  .add-btn:hover {
-     background: #005a61;
+     background: #30476c;
      transform: translateY(-2px);
      box-shadow: 0 4px 12px rgba(0, 123, 131, 0.4);
  }
@@ -186,17 +186,17 @@
      gap: 0.8rem;
      margin-bottom: 1.5rem;
      padding-bottom: 1rem;
-     border-bottom: 3px solid #007b83;
+     border-bottom: 3px solid #213555;
  }
 
  .category-header h3 {
-     color: #007b83;
+     color: #213555;
      margin: 0;
      font-size: 1.4rem;
  }
 
  .category-badge {
-     background: #007b83;
+     background: #213555;
      color: white;
      padding: 0.3rem 0.8rem;
      border-radius: 20px;
@@ -225,7 +225,7 @@
 
  .file-icon {
      font-size: 3rem;
-     color: #007b83;
+     color: #213555;
      margin-bottom: 0.8rem;
  }
 
@@ -262,12 +262,12 @@
  }
 
  .file-btn.download {
-     background: #007b83;
+     background: #213555;
      color: white;
  }
 
  .file-btn.download:hover {
-     background: #005a61;
+     background: #30476c;
  }
 
  .file-btn.delete {

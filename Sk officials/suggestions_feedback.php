@@ -161,7 +161,7 @@ try {
 
     <!-- Main Content -->
     <main class="admin-main">
-        <h2 style="color: #007b83; margin-bottom: 1.5rem;">
+        <h2 style="color: #213555; margin-bottom: 1.5rem;">
             <i class="fas fa-comments"></i> Suggestions & Feedback
         </h2>
 
@@ -180,7 +180,7 @@ try {
         <!-- Statistics -->
         <div class="stats-grid">
             <div class="stat-card">
-                <div class="stat-icon" style="background: #007b83;">
+                <div class="stat-icon" style="background: #213555;">
                     <i class="fas fa-comments"></i>
                 </div>
                 <div class="stat-info">
@@ -200,7 +200,7 @@ try {
             </div>
 
             <div class="stat-card">
-                <div class="stat-icon" style="background: #17a2b8;">
+                <div class="stat-icon" style="background: #213555;">
                     <i class="fas fa-eye"></i>
                 </div>
                 <div class="stat-info">

@@ -666,7 +666,7 @@ $total_members = array_sum($purok_counts);
                 </div>
 
                 <button type="submit" class="btn-primary">
-                    <i class="fas fa-save"></i> Save Member
+                     Add Member
                 </button>
             </form>
         </div>

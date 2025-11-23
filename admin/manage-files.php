@@ -179,7 +179,7 @@ foreach ($all_files as $file) {
         <!-- Budget Files -->
         <div class="category-section">
             <div class="category-header">
-                <i class="fas fa-money-bill-wave" style="font-size: 1.8rem; color: #007b83;"></i>
+                <i class="fas fa-money-bill-wave" style="font-size: 1.8rem; color: #213555;"></i>
                 <h3>Budget Documents</h3>
                 <span class="category-badge"><?= count($files_by_category['Budget']) ?> files</span>
             </div>
@@ -217,7 +217,7 @@ foreach ($all_files as $file) {
         <!-- Minutes Files -->
         <div class="category-section">
             <div class="category-header">
-                <i class="fas fa-clipboard-list" style="font-size: 1.8rem; color: #007b83;"></i>
+                <i class="fas fa-clipboard-list" style="font-size: 1.8rem; color: #213555;"></i>
                 <h3>Minutes of Meetings</h3>
                 <span class="category-badge"><?= count($files_by_category['Minutes']) ?> files</span>
             </div>
@@ -255,7 +255,7 @@ foreach ($all_files as $file) {
         <!-- Purchase Files -->
         <div class="category-section">
             <div class="category-header">
-                <i class="fas fa-shopping-cart" style="font-size: 1.8rem; color: #007b83;"></i>
+                <i class="fas fa-shopping-cart" style="font-size: 1.8rem; color: #213555;"></i>
                 <h3>Purchase Orders & Receipts</h3>
                 <span class="category-badge"><?= count($files_by_category['Purchase']) ?> files</span>
             </div>
@@ -293,7 +293,7 @@ foreach ($all_files as $file) {
         <!-- Other Files -->
         <div class="category-section">
             <div class="category-header">
-                <i class="fas fa-folder" style="font-size: 1.8rem; color: #007b83;"></i>
+                <i class="fas fa-folder" style="font-size: 1.8rem; color: #213555;"></i>
                 <h3>Other Documents</h3>
                 <span class="category-badge"><?= count($files_by_category['Others']) ?> files</span>
             </div>

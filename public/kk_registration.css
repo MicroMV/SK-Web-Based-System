@@ -10,7 +10,7 @@
 }
 
 .registration-container h2 {
-    color: #007b83;
+    color: #213555;
     text-align: center;
     margin-bottom: 1.5rem;
     font-size: 1.8rem;
@@ -54,7 +54,7 @@
 .form-group select:focus,
 .form-group textarea:focus {
     outline: none;
-    border-color: #007b83;
+    border-color: #213555;
     box-shadow: 0 0 0 3px rgba(0, 123, 131, 0.1);
 }
 
@@ -115,7 +115,7 @@
 
 /* Submit Button */
 .submit-btn {
-    background-color: #007b83;
+    background-color: #213555;
     color: white;
     padding: 0.9rem 2rem;
     border: none;
@@ -129,7 +129,7 @@
 }
 
 .submit-btn:hover {
-    background-color: #006670;
+    background-color: #354b70;
     transform: translateY(-1px);
 }
 
@@ -149,7 +149,7 @@
 }
 
 .form-section h3 {
-    color: #007b83;
+    color: #213555;
     margin-bottom: 1rem;
     font-size: 1.2rem;
 }
@@ -162,7 +162,7 @@
     margin-bottom: 1.5rem;
     color: #004085;
     font-size: 0.9rem;
-    border-left: 4px solid #007b83;
+    border-left: 4px solid #213555;
 }
 
 /* Footer */

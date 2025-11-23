@@ -54,7 +54,7 @@ $achievements = getAchievements();
     <main style="flex: 1;">
         <!-- ANNOUNCEMENTS SECTION -->
         <section class="announcements">
-            <h2 id="announcementName">LATEST ANNOUNCEMENTS</h2>
+            <h2 id="announcementName">ANNOUNCEMENTS 📣</h2>
             <div class="ann-grid">
                 <?php if (!empty($announcements)): ?>
                     <?php foreach ($announcements as $announcement): ?>
@@ -102,7 +102,7 @@ $achievements = getAchievements();
         </div>
 
         <section class="Achievements">
-            <h2 class="AchievementName">OUR ACHIEVEMENTS</h2>
+            <h2 class="AchievementName">ACHIEVEMENTS 🏆</h2>
             <?php if (!empty($achievements)): ?>
                 <div class="swiper achievements-carousel">
                     <div class="swiper-wrapper">

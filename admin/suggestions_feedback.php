@@ -121,7 +121,7 @@ try {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Suggestions & Feedback - SK Admin</title>
+    <title>Suggestions & Feedback</title>
     <link rel="stylesheet" href="admin-style.css">
     <link rel="stylesheet" href="suggestion.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
@@ -164,7 +164,7 @@ try {
 
     <!-- Main Content -->
     <main class="admin-main">
-        <h2 style="color: #007b83; margin-bottom: 1.5rem;">
+        <h2 style="color: #213555; margin-bottom: 1.5rem;">
             <i class="fas fa-comments"></i> Suggestions & Feedback
         </h2>
 
@@ -183,7 +183,7 @@ try {
         <!-- Statistics -->
         <div class="stats-grid">
             <div class="stat-card">
-                <div class="stat-icon" style="background: #007b83;">
+                <div class="stat-icon" style="background: #213555;">
                     <i class="fas fa-comments"></i>
                 </div>
                 <div class="stat-info">
@@ -203,7 +203,7 @@ try {
             </div>
 
             <div class="stat-card">
-                <div class="stat-icon" style="background: #17a2b8;">
+                <div class="stat-icon" style="background: #213555;">
                     <i class="fas fa-eye"></i>
                 </div>
                 <div class="stat-info">

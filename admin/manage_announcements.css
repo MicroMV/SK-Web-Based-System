@@ -53,7 +53,7 @@
         }
 
         .modal-header h3 {
-            color: #007b83;
+            color: #213555;
             margin: 0;
             font-size: 1.5rem;
         }
@@ -100,7 +100,7 @@
         .form-input:focus,
         textarea:focus {
             outline: none;
-            border-color: #007b83;
+            border-color: #213555;
             box-shadow: 0 0 0 3px rgba(0, 123, 131, 0.1);
         }
 
@@ -110,7 +110,7 @@
         }
 
         .btn-primary {
-            background: linear-gradient(135deg, #007b83 0%, #005a61 100%);
+            background: #213555;
             color: white;
             border: none;
             padding: 0.9rem 1.5rem;
@@ -171,7 +171,7 @@
         }
 
         .admin-table thead {
-            background: linear-gradient(135deg, #007b83 0%, #005a61 100%);
+            background: #213555;
         }
 
         .admin-table th {
@@ -211,12 +211,12 @@
         }
 
         .table-btn.edit {
-            background: #007b83;
+            background: #213555;
             color: white;
         }
 
         .table-btn.edit:hover {
-            background: #005a61;
+            background: #30476c;
             transform: translateY(-2px);
             box-shadow: 0 2px 8px rgba(0, 123, 131, 0.3);
         }
@@ -277,7 +277,7 @@
         }
 
         .page-header h2 {
-            color: #007b83;
+            color: #213555;
             font-size: 1.8rem;
             margin: 0;
             display: flex;

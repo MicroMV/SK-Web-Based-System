@@ -8,7 +8,7 @@
 }
 
 .section-title {
-    color: #007b83;
+    color: #213555;
     margin-bottom: 2rem;
     font-size: 1.8rem;
     display: flex;
@@ -84,7 +84,7 @@
 .form-group input:focus,
 .form-group select:focus {
     outline: none;
-    border-color: #007b83;
+    border-color: #213555;
     background: white;
     box-shadow: 0 0 0 3px rgba(0, 123, 131, 0.1);
 }
@@ -114,7 +114,7 @@
 }
 
 .password-toggle:hover {
-    color: #007b83;
+    color: #213555;
 }
 
 /* Hide browser's default password reveal button */
@@ -154,12 +154,12 @@
 }
 
 .btn-primary {
-    background: #007b83;
+    background: #213555;
     color: white;
 }
 
 .btn-primary:hover {
-    background: #005a61;
+    background: #30476c;
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(0, 123, 131, 0.3);
 }
@@ -210,7 +210,7 @@
 }
 
 .accounts-table thead {
-    background: linear-gradient(135deg, #007b83 0%, #005a61 100%);
+    background: #213555;
     color: white;
 }
 
@@ -219,7 +219,7 @@
     text-align: left;
     font-weight: 600;
     font-size: 0.95rem;
-    border-bottom: 3px solid #005a61;
+    border-bottom: 3px solid #213555;
 }
 
 .accounts-table th i {
@@ -255,7 +255,7 @@
 .role-sk_official {
     background: #d1ecf1;
     color: #0c5460;
-    border: 1px solid #17a2b8;
+    border: 1px solid #213555;
 }
 
 .btn-action {
@@ -274,12 +274,12 @@
 }
 
 .btn-edit {
-    background: #007b83;
+    background: #213555;
     color: white;
 }
 
 .btn-edit:hover {
-    background: #005a61;
+    background: #30476c;
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0, 123, 131, 0.3);
 }
@@ -334,7 +334,7 @@
 }
 
 .modal-title {
-    color: #007b83;
+    color: #213555;
     margin-bottom: 1.5rem;
     font-size: 1.5rem;
     display: flex;

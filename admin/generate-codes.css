@@ -29,7 +29,7 @@
  }
 
  .modal-header h3 {
-     color: #007b83;
+     color: #213555;
      margin: 0;
  }
 
@@ -65,7 +65,7 @@
  }
 
  .btn-primary {
-     background: linear-gradient(135deg, #007b83 0%, #005a61 100%);
+     background: #213555;
      color: white;
      border: none;
      padding: 0.9rem 1.5rem;
@@ -90,7 +90,7 @@
  }
 
  .page-header h2 {
-     color: #007b83;
+     color: #213555;
      font-size: 1.8rem;
      margin: 0;
      display: flex;
@@ -105,7 +105,7 @@
  }
 
  .add-btn {
-     background: #007b83;
+     background: #213555;
      color: white;
      border: none;
      padding: 0.8rem 1.5rem;
@@ -122,7 +122,7 @@
  }
 
  .add-btn:hover {
-     background: #005a61;
+     background: #30476c;
      transform: translateY(-2px);
  }
 
@@ -135,11 +135,11 @@
  }
 
  .add-btn.csv {
-     background: #17a2b8;
+     background: #213555;
  }
 
  .add-btn.csv:hover {
-     background: #138496;
+     background: #30476c;
  }
 
  .stats-grid {
@@ -154,7 +154,7 @@
      padding: 1.5rem;
      border-radius: 12px;
      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-     border-left: 4px solid #007b83;
+     border-left: 4px solid #213555;
  }
 
  .stat-card h4 {
@@ -166,7 +166,7 @@
  .stat-card .number {
      font-size: 2rem;
      font-weight: bold;
-     color: #007b83;
+     color: #213555;
  }
 
  .filter-section {
@@ -206,7 +206,7 @@
  }
 
  .admin-table thead {
-     background: linear-gradient(135deg, #007b83 0%, #005a61 100%);
+     background: #213555;
  }
 
  .admin-table th {
@@ -231,7 +231,7 @@
      font-family: 'Courier New', monospace;
      font-size: 1.1rem;
      font-weight: bold;
-     color: #007b83;
+     color: #213555;
      background: #f0f9fa;
      padding: 0.5rem 1rem;
      border-radius: 6px;
@@ -271,7 +271,7 @@
  }
 
  .table-btn.copy {
-     background: #007b83;
+     background: #213555;
  }
 
  .table-btn.delete {
@@ -306,12 +306,12 @@
  .print-header {
      text-align: center;
      margin-bottom: 2rem;
-     border-bottom: 3px solid #007b83;
+     border-bottom: 3px solid #213555;
      padding-bottom: 1rem;
  }
 
  .print-header h1 {
-     color: #007b83;
+     color: #213555;
      margin: 0.5rem 0;
  }
 
@@ -323,7 +323,7 @@
  }
 
  .code-card {
-     border: 2px dashed #007b83;
+     border: 2px dashed #213555;
      padding: 1.5rem;
      text-align: center;
      border-radius: 8px;
@@ -341,7 +341,7 @@
      font-family: 'Courier New', monospace;
      font-size: 1.5rem;
      font-weight: bold;
-     color: #007b83;
+     color: #213555;
      letter-spacing: 2px;
      margin: 1rem 0;
      padding: 0.8rem;

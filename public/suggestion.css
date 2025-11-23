@@ -24,7 +24,7 @@
     justify-content: center;
     width: 80px;
     height: 80px;
-    background: linear-gradient(135deg, #007b83 0%, #005a61 100%);
+    background: #213555;
     border-radius: 50%;
     margin-bottom: 1rem;
     box-shadow: 0 4px 20px rgba(0, 123, 131, 0.3);
@@ -36,7 +36,7 @@
 }
 
 .page-header h1 {
-    color: #007b83;
+    color: #1B3C53;
     font-size: 2.5rem;
     margin: 1rem 0 0.5rem 0;
     font-weight: 700;
@@ -72,7 +72,7 @@
 }
 
 .card-header {
-    background: linear-gradient(135deg, #007b83 0%, #005a61 100%);
+    background: #213555;
     color: white;
     padding: 1.5rem 2rem;
 }
@@ -168,7 +168,7 @@
 .form-group select:focus,
 .form-group textarea:focus {
     outline: none;
-    border-color: #007b83;
+    border-color: #1B3C53;
     box-shadow: 0 0 0 3px rgba(0, 123, 131, 0.1);
 }
 
@@ -233,7 +233,7 @@
 }
 
 .checkbox-container input:checked ~ .checkmark {
-    background: #007b83;
+    background: #1B3C53;
 }
 
 .checkbox-container input:checked ~ .checkmark::after {
@@ -262,26 +262,22 @@
 
 /* Submit Button */
 .submit-btn {
-    width: 100%;
-    padding: 1rem 2rem;
-    background: linear-gradient(135deg, #007b83 0%, #005a61 100%);
+    background-color: #213555;
     color: white;
+    padding: 0.9rem 2rem;
     border: none;
-    border-radius: 8px;
+    border-radius: 6px;
     font-size: 1rem;
     font-weight: 600;
     cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.8rem;
-    transition: all 0.3s;
-    box-shadow: 0 4px 12px rgba(0, 123, 131, 0.3);
+    width: 100%;
+    margin-top: 1rem;
+    transition: background-color 0.3s, transform 0.1s;
 }
 
 .submit-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(0, 123, 131, 0.4);
+    background-color: #354b70;
+    transform: translateY(-1px);
 }
 
 .submit-btn:active {
@@ -305,7 +301,7 @@
     padding: 1rem;
     border-radius: 8px;
     margin-bottom: 1rem;
-    border-left: 3px solid #007b83;
+    border-left: 3px solid #1B3C53;
     transition: all 0.3s;
 }
 
@@ -442,7 +438,7 @@
 }
 
 .responses-list::-webkit-scrollbar-thumb {
-    background: #007b83;
+    background: #1B3C53;
     border-radius: 10px;
 }
 
