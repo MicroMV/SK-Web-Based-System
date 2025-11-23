@@ -387,7 +387,18 @@
  @media (max-width: 768px) {
      .filter-group {
          flex-direction: column;
+         align-items: center;
      }
+     .filter-item {
+        width: 100%; 
+        text-align: center; 
+    }
+    
+    .filter-item select,
+    .filter-item button {
+        width: 100%; 
+        max-width: 300px;
+    }
 
      .stats-grid {
          grid-template-columns: 1fr;
