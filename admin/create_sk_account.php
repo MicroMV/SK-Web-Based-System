@@ -202,10 +202,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['create_account'])) {
                         <i class="fas fa-user-plus"></i>
                         Create Account
                     </button>
-                    <a href="admin_dashboard.php" class="btn btn-secondary">
-                        <i class="fas fa-times"></i>
-                        Cancel
-                    </a>
                 </div>
             </form>
         </div>
