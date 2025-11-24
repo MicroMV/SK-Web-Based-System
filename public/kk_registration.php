@@ -416,7 +416,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         <option value="Employed" <?= ($form_data['work_status'] ?? '') === 'Employed' ? 'selected' : '' ?>>Employed</option>
                         <option value="Unemployed" <?= ($form_data['work_status'] ?? '') === 'Unemployed' ? 'selected' : '' ?>>Unemployed</option>
                         <option value="Self-employed" <?= ($form_data['work_status'] ?? '') === 'Self-employed' ? 'selected' : '' ?>>Self-employed</option>
-                        <option value="Looking for a job" <?= ($form_data['work_status'] ?? '') === 'Looking for a job' ? 'selected' : '' ?>>Looking for a job</option>
+                        <option value="Student" <?= ($form_data['work_status'] ?? '') === 'Student' ? 'selected' : '' ?>>Student</option>
                     </select>
                     <?php if (isset($errors['work_status'])): ?>
                         <div class="error-message"><?= $errors['work_status'] ?></div>

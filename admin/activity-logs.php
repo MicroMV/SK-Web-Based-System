@@ -1,6 +1,7 @@
 <?php
 session_start();
 require_once __DIR__ . '/../config/database.php';
+date_default_timezone_set('Asia/Manila');
 require_once __DIR__ . '/../includes/funtions.php';
 
 if (!isset($_SESSION['user_id']) || $_SESSION['role'] != 'admin') {

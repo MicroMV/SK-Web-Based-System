@@ -347,6 +347,7 @@ $total_members = array_sum($purok_counts);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="../Assets/Picture2.png">
     <title>KK Profiles</title>
     <link rel="stylesheet" href="admin-style.css">
     <link rel="stylesheet" href="view-profiles.css">
@@ -578,6 +579,7 @@ $total_members = array_sum($purok_counts);
                             <option value="">Select Gender</option>
                             <option value="Male">Male</option>
                             <option value="Female">Female</option>
+                            <option value="Other">Other</option>
                         </select>
                     </div>
                     <div class="form-group">
@@ -588,6 +590,10 @@ $total_members = array_sum($purok_counts);
                             <option value="Married">Married</option>
                             <option value="Widowed">Widowed</option>
                             <option value="Separated">Separated</option>
+                            <option value="Divorced">Divorced</option>
+                            <option value="Annulled">Annulled</option>
+                            <option value="Live-in">Live-in</option>
+                            <option value="Unknown">Unknown</option>
                         </select>
                     </div>
                 </div>
@@ -599,8 +605,8 @@ $total_members = array_sum($purok_counts);
                             <option value="">Select Classification</option>
                             <option value="ISY">In-School Youth (ISY)</option>
                             <option value="OSY">Out-of-School Youth (OSY)</option>
-                            <option value="Working Youth">Working Youth</option>
-                            <option value="PWD">Person with Disability (PWD)</option>
+                            <option value="WY">Working Youth</option>
+                            <option value="YSN">Youth with Special Needs (YSN)</option>
                         </select>
                     </div>
                     <div class="form-group">
@@ -626,7 +632,7 @@ $total_members = array_sum($purok_counts);
                             <option value="">Select Status</option>
                             <option value="Employed">Employed</option>
                             <option value="Unemployed">Unemployed</option>
-                            <option value="Self-Employed">Self-Employed</option>
+                            <option value="Self-employed">Self-Employed</option>
                             <option value="Student">Student</option>
                         </select>
                     </div>
@@ -647,7 +653,6 @@ $total_members = array_sum($purok_counts);
                             <option value="">Select</option>
                             <option value="Yes">Yes</option>
                             <option value="No">No</option>
-                            <option value="Not Applicable">Not Applicable</option>
                         </select>
                     </div>
                     <div class="form-group">
