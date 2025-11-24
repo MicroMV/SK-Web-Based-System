@@ -395,25 +395,31 @@ html, body {
     }
 
     .admin-header {
-        padding: 0.8rem 1.5rem;
+        padding: 0.6rem 1rem;  /* Reduced padding */
         position: relative;
     }
 
     .admin-header .align {
         margin-bottom: 0;
+        flex-wrap: nowrap;  /* Keep everything inline */
+        gap: 8px;  /* Add smaller gap */
     }
 
     .left-header {
         flex: 1;
+        gap: 8px;  /* Smaller gap between logos and title */
     }
 
     .logo {
-        width: 50px;
-        height: 50px;
+        width: 40px;  /* Smaller logos */
+        height: 40px;
     }
 
     .admin-header h1 {
-        font-size: 1.2rem;
+        font-size: 0.9rem;  /* Smaller title */
+        white-space: nowrap;  /* Prevent text wrapping */
+        overflow: hidden;
+        text-overflow: ellipsis;  /* Add ... if too long */
     }
 
     .admin-header nav {
@@ -425,7 +431,7 @@ html, body {
     .admin-header .navigation {
         position: absolute;
         top: 100%;
-        right: 1.5rem;
+        right: 1rem;  /* Adjusted */
         left: auto;
         width: 280px;
         background: #213555;
@@ -510,9 +516,22 @@ html, body {
 }
 
 @media (max-width: 480px) {
+    .admin-header h1 {
+        font-size: 0.8rem;  /* Even smaller on tiny screens */
+    }
+    
+    .logo {
+        width: 35px;  /* Even smaller logos */
+        height: 35px;
+    }
+    
+    .admin-header {
+        padding: 0.5rem 0.8rem;  /* Even more compact */
+    }
+
     .admin-header .navigation {
         width: 250px;
-        right: 1rem;
+        right: 0.8rem;
     }
 
     .actions-grid {

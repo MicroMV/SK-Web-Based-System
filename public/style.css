@@ -36,7 +36,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     position: relative;
 }
 
@@ -492,20 +492,25 @@ footer {
 @media (max-width: 768px) {
     /* Header adjustments */
     header {
-        padding: 0.8rem 1.5rem;
+        padding: 0.8rem 1rem;  /* Reduce padding on mobile */
+        flex-wrap: nowrap;  /* Ensure items stay in one line */
+        gap: 0.5rem;  
     }
 
     .align {
-        gap: 10px;
+        gap: 8px;
+        flex: 1;  /* Allow logo/title to take available space */
+        justify-content: center;
     }
 
     h1 {
-        font-size: 1.3rem;
+        font-size: 1.1rem;  /* Smaller title on mobile */
+        white-space: nowrap;  /* Prevent title from wrapping */
     }
 
     .logo {
-        width: 50px;
-        height: 50px;
+       width: 45px;  /* Smaller logos */
+       height: 45px;
     }
 
     /* Show hamburger on mobile */

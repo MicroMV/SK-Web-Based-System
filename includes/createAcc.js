@@ -1,14 +1,19 @@
 // Hamburger menu toggle
 const hamburger = document.getElementById('hamburger');
 const navigation = document.getElementById('navigation');
-hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('active');
-    navigation.classList.toggle('active');
-});
 
-// Password toggle functionality (for create form)
+if (hamburger && navigation) {
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        navigation.classList.toggle('active');
+    });
+}
+
+// Password toggle functionality (works for BOTH create and edit forms)
 function togglePassword(fieldId) {
     const field = document.getElementById(fieldId);
+    if (!field) return; // Safety check
+    
     const icon = field.nextElementSibling;
 
     if (field.type === "password") {
@@ -22,13 +27,56 @@ function togglePassword(fieldId) {
     }
 }
 
-// Form validation on client side
+// DOMContentLoaded - All initialization code
 document.addEventListener('DOMContentLoaded', function () {
+    
+    // ===== PASSWORD TOGGLE EVENT LISTENERS FOR CREATE FORM =====
+    const togglePasswordBtn = document.getElementById('togglePassword');
+    const toggleConfirmPasswordBtn = document.getElementById('toggleConfirmPassword');
+    
+    // Password field toggle
+    if (togglePasswordBtn) {
+        togglePasswordBtn.addEventListener('click', function() {
+            const passwordField = document.getElementById('password');
+            if (passwordField) {
+                if (passwordField.type === 'password') {
+                    passwordField.type = 'text';
+                    this.classList.remove('fa-eye');
+                    this.classList.add('fa-eye-slash');
+                } else {
+                    passwordField.type = 'password';
+                    this.classList.remove('fa-eye-slash');
+                    this.classList.add('fa-eye');
+                }
+            }
+        });
+    }
+    
+    // Confirm Password field toggle - FIXED ID
+    if (toggleConfirmPasswordBtn) {
+        toggleConfirmPasswordBtn.addEventListener('click', function() {
+            const confirmField = document.getElementById('confirm_password'); // FIXED: with underscore
+            
+            if (confirmField) {
+                if (confirmField.type === 'password') {
+                    confirmField.type = 'text';
+                    this.classList.remove('fa-eye');
+                    this.classList.add('fa-eye-slash');
+                } else {
+                    confirmField.type = 'password';
+                    this.classList.remove('fa-eye-slash');
+                    this.classList.add('fa-eye');
+                }
+            }
+        });
+    }
+
+    // ===== CREATE ACCOUNT FORM VALIDATION =====
     const createForm = document.getElementById('createAccountForm');
     if (createForm) {
         createForm.addEventListener('submit', function (e) {
             const password = document.getElementById('password').value;
-            const confirmPassword = document.getElementById('confirm_password').value;
+            const confirmPassword = document.getElementById('confirm_password').value; // FIXED: with underscore
 
             if (password !== confirmPassword) {
                 e.preventDefault();
@@ -44,7 +92,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // Modal handling for Edit Account
+    // ===== EDIT MODAL HANDLING =====
     const modal = document.getElementById("editModal");
     const closeBtn = document.querySelector(".close");
     const editButtons = document.querySelectorAll(".btn-edit");
@@ -52,7 +100,10 @@ document.addEventListener('DOMContentLoaded', function () {
     if (editButtons.length > 0) {
         editButtons.forEach(button => {
             button.addEventListener("click", () => {
-                modal.style.display = "flex";
+                if (modal) {
+                    modal.style.display = "flex";
+                }
+                
                 const isLastAdmin = button.dataset.islastadmin === 'true';
 
                 document.getElementById("edit_user_id").value = button.dataset.id;
@@ -68,27 +119,28 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 if (isLastAdmin) {
                     roleSelect.disabled = true;
-                    roleWarning.style.display = 'block';
+                    if (roleWarning) roleWarning.style.display = 'block';
                 } else {
                     roleSelect.disabled = false;
-                    roleWarning.style.display = 'none';
+                    if (roleWarning) roleWarning.style.display = 'none';
                 }
             });
         });
     }
 
-
+    // Close modal button
     if (closeBtn) {
         closeBtn.onclick = closeModal;
     }
 
+    // Close modal when clicking outside
     window.onclick = function (event) {
         if (event.target == modal) {
             closeModal();
         }
     };
 
-    // Edit Form validation
+    // ===== EDIT FORM VALIDATION =====
     const editForm = document.getElementById("editForm");
     if (editForm) {
         editForm.addEventListener("submit", function (event) {
@@ -113,7 +165,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // Auto-dismiss alerts after 5 seconds
+    // ===== AUTO-DISMISS ALERTS =====
     const alerts = document.querySelectorAll('.alert');
     alerts.forEach(alert => {
         setTimeout(() => {
@@ -126,7 +178,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-// Close modal function
+// ===== CLOSE MODAL FUNCTION =====
 function closeModal() {
     const modal = document.getElementById("editModal");
     if (modal) {
