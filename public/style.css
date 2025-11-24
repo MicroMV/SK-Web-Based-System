@@ -630,3 +630,125 @@ footer {
         font-size: 3rem;
     }
 }
+/* Base styles for all navigation links */
+.navigation {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* Style ONLY the first two links (KK Profile and Suggestion) with underline animation */
+.navigation li:nth-child(1) a,
+.navigation li:nth-child(2) a {
+  position: relative;
+  display: inline-block;
+  padding: 0.4rem 0.8rem 0.3rem;
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+/* Animated underline for first two links only */
+.navigation li:nth-child(1) a::after,
+.navigation li:nth-child(2) a::after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #FFD700, #FFA500);
+  border-radius: 2px;
+  width: 0;
+  transition: width 0.35s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.navigation li:nth-child(1) a:hover,
+.navigation li:nth-child(2) a:hover {
+  color: #FFD700;
+}
+
+.navigation li:nth-child(1) a:hover::after,
+.navigation li:nth-child(2) a:hover::after {
+  width: 100%;
+}
+
+/* Keep Sign In button styled differently (3rd link) */
+.navigation li:nth-child(3) a,
+#SignInButton {
+  background-color: white;
+  color: #213555;
+  padding: 0.5rem 1.2rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.navigation li:nth-child(3) a:hover,
+#SignInButton:hover {
+  background-color: #FFD700;
+  transform: translateY(-2px);
+}
+
+/* Animated announcement cards */
+.AnnContent {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,123,131,0.08), 0 2px 8px rgba(0,0,0,0.05);
+  overflow: hidden;
+  width: 100%;
+  max-width: 350px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  position: relative;
+  min-height: 320px;
+  opacity: 0;
+  transform: translateY(40px) scale(0.975);
+  animation: cardFadeIn 0.65s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.AnnContent:nth-child(1) { animation-delay: 0.10s; }
+.AnnContent:nth-child(2) { animation-delay: 0.22s; }
+.AnnContent:nth-child(3) { animation-delay: 0.34s; }
+
+@keyframes cardFadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Card hover */
+.AnnContent:hover {
+  transform: translateY(-6px) scale(1.035);
+  box-shadow: 0 8px 28px rgba(0,123,131,0.15), 0 2px 16px rgba(0,0,0,0.12);
+  z-index: 2;
+}
+
+/* Card 'read more' animation */
+.AnnContent::after {
+  content: 'Click to read more →';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: #213555;
+  color: white;
+  padding: 0.4rem 0.8rem;
+  font-size: 0.8rem;
+  border-radius: 12px 0 12px 0;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.AnnContent:hover::after {
+  opacity: 1;
+}
+
