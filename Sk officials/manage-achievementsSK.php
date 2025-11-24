@@ -132,7 +132,7 @@ $achievements = $stmt->fetchAll(PDO::FETCH_ASSOC);
         <?php endif; ?>
 
         <?php if (isset($_GET['deleted'])): ?>
-            <div class="delete-message">
+            <div class="success-message">
                 <i class="fas fa-trash-alt"></i> Achievement deleted successfully!
             </div>
         <?php endif; ?>
