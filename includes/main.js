@@ -113,6 +113,41 @@ document.querySelectorAll('.AnnContent').forEach(card => {
     });
 });
 
+/// Improved Intersection Observer for smoother scroll animations
+function initScrollAnimations() {
+    const officialCards = document.querySelectorAll('.official-card-horizontal');
+    
+    // Create observer with optimized settings
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // Add slight delay for smoother appearance
+                setTimeout(() => {
+                    entry.target.classList.add('animate-in');
+                }, 100);
+                // Stop observing after animation triggers
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.15, // Trigger when 15% of element is visible
+        rootMargin: '0px 0px -100px 0px' // Start animation earlier
+    });
+    
+    // Observe all official cards
+    officialCards.forEach(card => {
+        observer.observe(card);
+    });
+}
+
+// Run when DOM is loaded
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initScrollAnimations);
+} else {
+    initScrollAnimations();
+}
+
+
 // Close modal
 closeModal.addEventListener('click', () => {
     modal.style.display = 'none';

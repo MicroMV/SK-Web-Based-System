@@ -129,6 +129,131 @@ $achievements = getAchievements();
                 <h3>No Achievements Yet</h3>
             <?php endif; ?>
         </section>
+        <!-- SK OFFICIALS SECTION -->
+        <section class="sk-officials">
+            <div class="officials-header">
+                <h2>SK OFFICIALS 👥</h2>
+                <p class="subtitle">Meet the Sangguniang Kabataan Leaders</p>
+            </div>
+
+            <div class="officials-container">
+                <!-- Official Card 1 - Horizontal Layout -->
+                <div class="official-card-horizontal">
+                    <div class="official-image-box">
+                        <img src="../Assets/images/chairperson.jpg" alt="SK Chairperson" class="official-img">
+                    </div>
+                    <div class="official-details">
+                        <h3 class="official-name">Mariane Habolin</h3>
+                        <p class="official-position">SK Chairperson</p>
+                        <p class="official-bio">Leading the Sangguniang Kabataan with dedication and commitment to serve the youth of our barangay.</p>
+                    </div>
+                </div>
+
+                <!-- Official Card 2 -->
+                <div class="official-card-horizontal">
+                    <div class="official-image-box">
+                        <img src="../Assets/images/kagawad1.jpg" alt="SK Kagawad" class="official-img">
+                    </div>
+                    <div class="official-details">
+                        <h3 class="official-name">Diane Lagata</h3>
+                        <p class="official-position">SK Kagawad</p>
+                        <p class="official-bio">Advocating for eco-friendly projects and environmental conservation efforts in our barangay.</p>
+                    </div>
+                </div>
+
+                <!-- Official Card 3 -->
+                <div class="official-card-horizontal">
+                    <div class="official-image-box">
+                        <img src="../Assets/images/kagawad2.jpg" alt="SK Kagawad" class="official-img">
+                    </div>
+                    <div class="official-details">
+                        <h3 class="official-name">Klarenz Luis Habal</h3>
+                        <p class="official-position">SK Kagawad</p>
+                        <p class="official-bio">Advocating for safe communities through peace-building and crime prevention initiatives.</p>
+                    </div>
+                </div>
+
+                <!-- Official Card 4 -->
+                <div class="official-card-horizontal">
+                    <div class="official-image-box">
+                        <img src="../Assets/images/kagawad3.jpg" alt="SK Kagawad" class="official-img">
+                    </div>
+                    <div class="official-details">
+                        <h3 class="official-name">Mildred Matuba</h3>
+                        <p class="official-position">SK Kagawad</p>
+                        <p class="official-bio">Advocating for education and skills development programs for barangay youth.</p>
+                    </div>
+                </div>
+                <!-- Official Card 5 -->
+                <div class="official-card-horizontal">
+                    <div class="official-image-box">
+                        <img src="../Assets/images/kagawad4.jpg" alt="SK Kagawad" class="official-img">
+                    </div>
+                    <div class="official-details">
+                        <h3 class="official-name">John Michael Bunao</h3>
+                        <p class="official-position">SK Kagawad</p>
+                        <p class="official-bio">Advocating for volunteerism and responsible civic engagement among the youth.</p>
+                    </div>
+                </div>
+                <!-- Official Card 6 -->
+                <div class="official-card-horizontal">
+                    <div class="official-image-box">
+                        <img src="../Assets/images/kagawad5.jpg" alt="SK Kagawad" class="official-img">
+                    </div>
+                    <div class="official-details">
+                        <h3 class="official-name">Randel Grefalda</h3>
+                        <p class="official-position">SK Kagawad</p>
+                        <p class="official-bio">Focused on sports and recreational activities for the youth of our community.</p>
+                    </div>
+                </div>
+                <!-- Official Card 7 -->
+                <div class="official-card-horizontal">
+                    <div class="official-image-box">
+                        <img src="../Assets/images/kagawad6.jpg" alt="SK Kagawad" class="official-img">
+                    </div>
+                    <div class="official-details">
+                        <h3 class="official-name">Aila Marie Matuba</h3>
+                        <p class="official-position">SK Kagawad</p>
+                        <p class="official-bio">Passionate about youth development programs and community engagement activities.</p>
+                    </div>
+                </div>
+                <!-- Official Card 8 -->
+                <div class="official-card-horizontal">
+                    <div class="official-image-box">
+                        <img src="../Assets/images/kagawad7.jpg" alt="SK Kagawad" class="official-img">
+                    </div>
+                    <div class="official-details">
+                        <h3 class="official-name">Charles Bocaya</h3>
+                        <p class="official-position">SK Kagawad</p>
+                        <p class="official-bio">Advocating for health awareness and wellness programs for the youth of our barangay.</p>
+                    </div>
+                </div>
+                <!-- Official Card 9 -->
+                <div class="official-card-horizontal">
+                    <div class="official-image-box">
+                        <img src="../Assets/images/secretary.jpg" alt="SK Secretary" class="official-img">
+                    </div>
+                    <div class="official-details">
+                        <h3 class="official-name">Rongie H. Murallos</h3>
+                        <p class="official-position">SK Secretary</p>
+                        <p class="official-bio">Maintaining accurate records and ensuring smooth documentation of all SK activities.</p>
+                    </div>
+                </div>
+                <!-- Official Card 10 -->
+                <div class="official-card-horizontal">
+                    <div class="official-image-box">
+                        <img src="../Assets/images/treasurer.jpg" alt="SK Treasurer" class="official-img">
+                    </div>
+                    <div class="official-details">
+                        <h3 class="official-name">Desiree Doctor</h3>
+                        <p class="official-position">SK Treasurer</p>
+                        <p class="official-bio">Managing funds and resources to ensure transparency and accountability.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
     </main>
 
 

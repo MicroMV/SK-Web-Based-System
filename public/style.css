@@ -5,6 +5,10 @@ html, body {
     margin: 0;
     padding: 0;
 }
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
 
 body {
     display: flex;
@@ -477,7 +481,7 @@ h1 {
 
 /* FOOTER */
 footer {
-    background: transparent;
+    background: #F9F8F6;
     color: #666666;
     text-align: center;
     padding: 1.5rem;
@@ -752,3 +756,152 @@ footer {
   opacity: 1;
 }
 
+/* SK OFFICIALS SECTION - HORIZONTAL LAYOUT */
+.sk-officials {
+  background: #F9F8F6;
+  padding: 4rem 2rem;
+}
+
+.officials-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.officials-header h2 {
+    font-size: 2rem;
+    color: #213555;
+    margin-bottom: 1rem;
+    font-family: "DynaPuff", system-ui;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+}
+
+.officials-header .subtitle {
+  color: #666;
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+/* Officials Container */
+.officials-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Horizontal Card Layout - NO AUTO ANIMATION */
+.official-card-horizontal {
+  background: white;
+  border-radius: 16px;
+  display: flex;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 123, 131, 0.08);
+  transition: all 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+  opacity: 0;
+  transform: translateX(-30px);
+}
+
+.official-card-horizontal.animate-in {
+  animation: slideInLeft 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Staggered animation delays - only apply when animate-in class is added */
+.official-card-horizontal:nth-child(1).animate-in { animation-delay: 0.1s; }
+.official-card-horizontal:nth-child(2).animate-in { animation-delay: 0.2s; }
+.official-card-horizontal:nth-child(3).animate-in { animation-delay: 0.3s; }
+.official-card-horizontal:nth-child(4).animate-in { animation-delay: 0.4s; }
+.official-card-horizontal:nth-child(5).animate-in { animation-delay: 0.5s; }
+.official-card-horizontal:nth-child(6).animate-in { animation-delay: 0.6s; }
+.official-card-horizontal:nth-child(7).animate-in { animation-delay: 0.7s; }
+.official-card-horizontal:nth-child(8).animate-in { animation-delay: 0.8s; }
+.official-card-horizontal:nth-child(9).animate-in { animation-delay: 0.9s; }
+.official-card-horizontal:nth-child(10).animate-in { animation-delay: 1s; }
+
+@keyframes slideInLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.official-card-horizontal:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 40px rgba(33, 53, 85, 0.15);
+}
+
+/* Image Box */
+.official-image-box {
+  width: 200px;
+  min-width: 200px;
+  height: 200px;
+  background: linear-gradient(135deg, #3E5879 0%, #213555 100%);
+  overflow: hidden;
+  position: relative;
+}
+
+.official-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.official-card-horizontal:hover .official-img {
+  transform: scale(1.1);
+}
+
+/* Details Section */
+.official-details {
+  padding: 1.8rem 2rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.official-name {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.5rem;
+  color: #213555;
+  font-weight: 600;
+}
+
+.official-position {
+  margin: 0 0 1rem 0;
+  color: #3E5879;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.official-bio {
+  margin: 0;
+  color: #666;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .official-card-horizontal {
+    flex-direction: column;
+  }
+  
+  .official-image-box {
+    width: 100%;
+    height: 250px;
+  }
+  
+  .official-details {
+    padding: 1.5rem;
+  }
+  
+  .officials-header h2 {
+    font-size: 2rem;
+  }
+}
