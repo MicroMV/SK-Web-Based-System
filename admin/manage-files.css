@@ -320,3 +320,13 @@
          justify-content: center;
      }
  }
+ /* Edit Button Styling */
+.file-btn.edit {
+    background: #46679d;
+    color: white;
+}
+
+.file-btn.edit:hover {
+    background: #5a749e;
+    box-shadow: 0 2px 8px rgba(0, 123, 131, 0.3);
+}

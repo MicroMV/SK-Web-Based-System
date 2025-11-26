@@ -91,6 +91,47 @@ if (isset($_GET['delete'])) {
     exit;
 }
 
+// Handle file edit
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['edit_file'])) {
+    $file_id = intval($_POST['file_id']);
+    $new_name = trim($_POST['original_name']);
+    $category = $_POST['category'];
+    $description = trim($_POST['description']);
+    $user_id = $_SESSION['user_id'];
+    
+    // Get current file info to preserve extension
+    $stmt = $pdo->prepare("SELECT original_name FROM files WHERE file_id=?");
+    $stmt->execute([$file_id]);
+    $current_file = $stmt->fetch(PDO::FETCH_ASSOC);
+    
+    if ($current_file) {
+        // Extract current extension
+        $current_extension = pathinfo($current_file['original_name'], PATHINFO_EXTENSION);
+        
+        // Remove any extension from new name and append original extension
+        $new_name_without_ext = pathinfo($new_name, PATHINFO_FILENAME);
+        $final_name = $new_name_without_ext . '.' . $current_extension;
+        
+        // Update database
+        $stmt = $pdo->prepare("UPDATE files SET original_name=?, category=?, description=? WHERE file_id=?");
+        $stmt->execute([$final_name, $category, $description, $file_id]);
+        
+        logActivity($user_id, "UPDATE", 'files', $file_id, "Updated file: $final_name");
+        
+        header("Location: manage-files.php?success=File updated successfully");
+        exit;
+    }
+}
+
+// Fetch file for editing
+$edit_file = null;
+if (isset($_GET['edit'])) {
+    $edit_id = intval($_GET['edit']);
+    $stmt = $pdo->prepare("SELECT * FROM files WHERE file_id=?");
+    $stmt->execute([$edit_id]);
+    $edit_file = $stmt->fetch(PDO::FETCH_ASSOC);
+}
+
 // Get files grouped by category
 $stmt = $pdo->query("SELECT f.*, u.full_name FROM files f JOIN users u ON f.user_id = u.user_id ORDER BY f.category, f.uploaded_at DESC");
 $all_files = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -113,6 +154,7 @@ foreach ($all_files as $file) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="../Assets/Picture2.png">
     <title>File Management</title>
     <link rel="stylesheet" href="admin-style.css">
     <link rel="stylesheet" href="manage-files.css">
@@ -203,6 +245,7 @@ foreach ($all_files as $file) {
                                 <a href="download.php?id=<?= $file['file_id'] ?>" class="file-btn download">
                                     <i class="fas fa-download"></i> Download
                                 </a>
+                                <a href="manage-files.php?edit=<?= $file['file_id'] ?>" class="file-btn edit">Edit</a>
 
                                 <a href="?delete=<?= $file['file_id'] ?>" class="file-btn delete" onclick="return confirm('Delete this file?')">
                                     <i class="fas fa-trash"></i>
@@ -241,6 +284,7 @@ foreach ($all_files as $file) {
                                 <a href="download.php?id=<?= $file['file_id'] ?>" class="file-btn download">
                                     <i class="fas fa-download"></i> Download
                                 </a>
+                                <a href="manage-files.php?edit=<?= $file['file_id'] ?>" class="file-btn edit">Edit</a>
 
                                 <a href="?delete=<?= $file['file_id'] ?>" class="file-btn delete" onclick="return confirm('Delete this file?')">
                                     <i class="fas fa-trash"></i>
@@ -279,6 +323,7 @@ foreach ($all_files as $file) {
                                 <a href="download.php?id=<?= $file['file_id'] ?>" class="file-btn download">
                                     <i class="fas fa-download"></i> Download
                                 </a>
+                                <a href="manage-files.php?edit=<?= $file['file_id'] ?>" class="file-btn edit">Edit</a>
 
                                 <a href="?delete=<?= $file['file_id'] ?>" class="file-btn delete" onclick="return confirm('Delete this file?')">
                                     <i class="fas fa-trash"></i>
@@ -317,6 +362,7 @@ foreach ($all_files as $file) {
                                 <a href="download.php?id=<?= $file['file_id'] ?>" class="file-btn download">
                                     <i class="fas fa-download"></i> Download
                                 </a>
+                                <a href="manage-files.php?edit=<?= $file['file_id'] ?>" class="file-btn edit">Edit</a>
 
                                 <a href="?delete=<?= $file['file_id'] ?>" class="file-btn delete" onclick="return confirm('Delete this file?')">
                                     <i class="fas fa-trash"></i>
@@ -371,6 +417,57 @@ foreach ($all_files as $file) {
             </form>
         </div>
     </div>
+        <!-- Edit File Modal -->
+    <?php if ($edit_file): ?>
+    <?php 
+        // Separate filename and extension for display
+        $file_info = pathinfo($edit_file['original_name']);
+        $filename_only = $file_info['filename'];
+        $extension = isset($file_info['extension']) ? $file_info['extension'] : '';
+    ?>
+    <div class="modal" id="editModal" style="display: block;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Edit File Details</h3>
+                <button class="close-btn" onclick="window.location.href='manage-files.php'">&times;</button>
+            </div>
+            
+            <form method="POST" action="manage-files.php">
+                <input type="hidden" name="file_id" value="<?= $edit_file['file_id'] ?>">
+                
+                <div class="form-group">
+                    <label>File Name</label>
+                    <div style="display: flex; align-items: center; gap: 0.5rem;">
+                        <input type="text" name="original_name" class="form-input" 
+                            value="<?= htmlspecialchars($filename_only) ?>" 
+                            required
+                            style="flex: 1;">
+                        <span style="font-weight: 600; color: #213555; font-size: 1.1rem;">.<?= htmlspecialchars($extension) ?></span>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label>Category</label>
+                    <select name="category" class="form-input" required>
+                        <option value="Budget" <?= $edit_file['category'] == 'Budget' ? 'selected' : '' ?>>Budget Documents</option>
+                        <option value="Minutes" <?= $edit_file['category'] == 'Minutes' ? 'selected' : '' ?>>Minutes of Meetings</option>
+                        <option value="Purchase" <?= $edit_file['category'] == 'Purchase' ? 'selected' : '' ?>>Purchase Orders & Receipts</option>
+                        <option value="Others" <?= $edit_file['category'] == 'Others' ? 'selected' : '' ?>>Other Documents</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label>Description</label>
+                    <textarea name="description" rows="4" class="form-input"><?= htmlspecialchars($edit_file['description']) ?></textarea>
+                </div>
+                
+                <button type="submit" name="edit_file" class="btn-primary">
+                    Update File
+                </button>
+            </form>
+        </div>
+    </div>
+    <?php endif; ?>
 
     <script>
         const modal = document.getElementById('uploadModal');
