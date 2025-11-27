@@ -63,7 +63,7 @@ $achievements = getAchievements();
                             data-title="<?= htmlspecialchars($announcement['title']) ?>"
                             data-content="<?= htmlspecialchars($announcement['content']) ?>"
                             data-user="<?= htmlspecialchars($announcement['posted_by'] ?? 'Unknown') ?>"
-                            data-date="<?= htmlspecialchars($announcement['created_at']) ?>"
+                            data-date="<?= date('M d, Y g:i A', strtotime($announcement['created_at'])) ?>"
                             data-image="../<?= htmlspecialchars($announcement['image_path'] ?? '') ?>">
 
                             <?php if (!empty($announcement['image_path'])): ?>
@@ -77,7 +77,8 @@ $achievements = getAchievements();
 
                             <h3 class="title"><?= htmlspecialchars($announcement['title']) ?></h3>
                             <p><?= htmlspecialchars($announcement['content']) ?></p>
-                            <span class="meta"><?= htmlspecialchars($announcement['posted_by'] ?? 'Unknown') ?> | <?= htmlspecialchars($announcement['created_at']) ?></span>
+                            <span class="meta"><?= htmlspecialchars($announcement['posted_by'] ?? 'Unknown') ?> | <?= date('M d, Y g:i A', strtotime($announcement['created_at'])) ?></span>
+
                         </div>
                     <?php endforeach; ?>
                 <?php else: ?>
