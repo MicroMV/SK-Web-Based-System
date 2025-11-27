@@ -141,9 +141,27 @@
      gap: 0.5rem;
      transition: transform 0.2s, box-shadow 0.2s;
      box-shadow: 0 2px 8px rgba(0, 123, 131, 0.2);
+     width: 20%;
+     justify-content: center;
+ }
+  .btn-primary1 {
+     background: #213555;
+     color: white;
+     border: none;
+     padding: 0.9rem 1.5rem;
+     border-radius: 8px;
+     cursor: pointer;
+     font-size: 1rem;
+     font-weight: 600;
+     display: inline-flex;
+     align-items: center;
+     gap: 0.5rem;
+     transition: transform 0.2s, box-shadow 0.2s;
+     box-shadow: 0 2px 8px rgba(0, 123, 131, 0.2);
      width: 100%;
      justify-content: center;
  }
+
 
  .btn-primary:hover {
      transform: translateY(-2px);

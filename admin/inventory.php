@@ -250,7 +250,7 @@ $inventory = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 </div>
 
 
-                <button type="submit" class="btn-primary">
+                <button type="submit" class="btn-primary1">
                     <i class="fas fa-save"></i> Save Item
                 </button>
             </form>
