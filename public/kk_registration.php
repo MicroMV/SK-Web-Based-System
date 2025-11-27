@@ -272,6 +272,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 </div>
 
                 <div class="form-group">
+                    <label for="birthdate">Birthdate <span class="required">*</span></label>
+                    <input type="date" id="birthdate" name="birthdate" value="<?= htmlspecialchars($form_data['birthdate'] ?? '') ?>" required>
+                    <?php if (isset($errors['birthdate'])): ?>
+                        <div class="error-message"><?= $errors['birthdate'] ?></div>
+                    <?php endif; ?>
+                </div>
+
+                <div class="form-group">
                     <label for="age">Age <span class="required">*</span></label>
                     <input type="number" id="age" name="age" min="15" max="30" value="<?= htmlspecialchars($form_data['age'] ?? '') ?>" required>
                     <?php if (isset($errors['age'])): ?>
@@ -279,13 +287,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <?php endif; ?>
                 </div>
 
-                <div class="form-group">
-                    <label for="birthdate">Birthdate <span class="required">*</span></label>
-                    <input type="date" id="birthdate" name="birthdate" value="<?= htmlspecialchars($form_data['birthdate'] ?? '') ?>" required>
-                    <?php if (isset($errors['birthdate'])): ?>
-                        <div class="error-message"><?= $errors['birthdate'] ?></div>
-                    <?php endif; ?>
-                </div>
 
                 <div class="form-group">
                     <label for="gender">Gender <span class="required">*</span></label>

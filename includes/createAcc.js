@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Confirm Password field toggle - FIXED ID
     if (toggleConfirmPasswordBtn) {
         toggleConfirmPasswordBtn.addEventListener('click', function() {
-            const confirmField = document.getElementById('confirm_password'); // FIXED: with underscore
+            const confirmField = document.getElementById('confirm_password');
             
             if (confirmField) {
                 if (confirmField.type === 'password') {
@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', function () {
     if (createForm) {
         createForm.addEventListener('submit', function (e) {
             const password = document.getElementById('password').value;
-            const confirmPassword = document.getElementById('confirm_password').value; // FIXED: with underscore
+            const confirmPassword = document.getElementById('confirm_password').value;
 
             if (password !== confirmPassword) {
                 e.preventDefault();
