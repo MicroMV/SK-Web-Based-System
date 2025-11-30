@@ -4,11 +4,7 @@ $db = 'sk_system';
 $user = 'root'; 
 $pass = '';    
 $charset = 'utf8mb4';
-//$host = 'sql305.infinityfree.com';
-//$db = 'if0_40236787_sk_system';
-//$user = 'if0_40236787'; 
-//$pass = 'oixm49CHSBD4k';    
-//$charset = 'utf8mb4';
+
 
 $dsn = "mysql:host=$host;dbname=$db;charset=$charset";
 $options = [
